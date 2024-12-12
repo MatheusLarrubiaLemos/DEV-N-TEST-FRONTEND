@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <title>Popover</title>
+</head>
+
+    <style>
+        :popover-open{
+            width: 300px;
+            padding: 0 10px;
+            border-radius: 12px;
+        }
+
+        ::backdrop{
+            background-color: rgba(0, 0, 0, .3);
+        }
+
+        .popover-container :popover-open{
+            inset: unset;
+        }
+    </style>
+<body>
+
+    <h1>Popover</h1>
+
+    <button popovertarget="my-popover">Toggle Popover</button>
+    <div id="my-popover" popover>Clicou porquê é <span>TROUXA!!!</span></div>
+    <hr>
+    <button popovertarget="my-popover2">popover auto (default)</button>
+    <div id="my-popover2" popover="auto">Clicou porquê é <span>TROUXA!!!</span></div>
+    <hr>
+    <button popovertarget="my-popover3">popover auto (default)</button>
+    <div id="my-popover3" popover="manual">Clicou porquê é <span>TROUXA!!!</span>, não vai fechar man....</div>
+    <hr>
+    <button popovertarget="my-popover4" popovertargetaction="show">show auto (default)</button>
+    <button popovertarget="my-popover4" popovertargetaction="hide">hide auto (default)</button>
+    <div id="my-popover4" popover="manual">Clicou porquê é <span>TROUXA!!!</span>, não vai fechar man....</div>
+    <hr>
+    <div class="popover-container">
+        <button popovertarget="my-popover5">Toggle</button>
+        <div popover id="my-popover5">texto de ajuda</div>
+    </div>
+    
+</body>
+
+</html>
